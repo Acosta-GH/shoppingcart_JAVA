@@ -14,11 +14,11 @@
     <div class="row">
         <div class="col-12 text-center">
             <h1 class="display-4 text-primary">
-                <i class="bi bi-windows"></i> Bienvenido al Carrito de Compras
+                <i class="bi bi-windows"></i> Windows Store
             </h1>
-            <p class="lead text-secondary">Explora nuestros productos y añade tus favoritos al carrito.</p>
+            <p class="lead text-secondary">Explora nuestros productos.</p>
             
-            <a href="productos.jsp" class="btn btn-primary btn-lg">
+            <a href="carrito" class="btn btn-primary btn-lg">
                 <i class="bi bi-box-arrow-right"></i> Ver Productos
             </a>
         </div>
