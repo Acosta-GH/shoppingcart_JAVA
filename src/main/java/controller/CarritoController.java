@@ -15,11 +15,12 @@ import java.io.IOException;
 @WebServlet("/carrito")
 public class CarritoController extends HttpServlet {
     private Carrito carrito = new Carrito();
-
+    
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setAttribute("carrito", carrito);
         request.getRequestDispatcher("productos.jsp").forward(request, response);
     }
-
 }
+
+

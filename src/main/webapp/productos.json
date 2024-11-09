@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "nombre": "Excel 2019",
+    "descripcion": "Descripción 1",
+    "precio": 19.99
+  },
+  {
+    "id": 2,
+    "nombre": "Windows 11",
+    "descripcion": "Descripción 2",
+    "precio": 29.99
+  },
+  {
+    "id": 3,
+    "nombre": "OneDrive 1TB",
+    "descripcion": "Descripción 3",
+    "precio": 39.99
+  }
+]

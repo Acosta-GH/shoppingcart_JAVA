@@ -14,7 +14,7 @@
     <div class="row">
         <div class="col-12 text-center">
             <h1 class="display-4 text-primary">
-                <i class="bi bi-windows"></i> Windows Store
+                <i class="bi bi-windows"></i> Microsoft Store
             </h1>
             <p class="lead text-secondary">Explora nuestros productos.</p>
             

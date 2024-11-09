@@ -12,26 +12,49 @@
 </head>
 <body class="bg-light">
 
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">MS Store</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="carrito.jsp">Carrito</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Mi Cuenta</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
 <div class="container mt-5">
     <h1 class="display-4 text-center text-primary">Nuestros Productos</h1>
 
     <div class="row">
         <%
-            // Esto es temporal, tenemos que borrarlo
+            // Esto es temporal, tenemos que borrarlo para usar el json
             List<Producto> productos = new ArrayList<>();
-            productos.add(new Producto(1, "Excel 2019", "Descripción 1", 19.99));
-            productos.add(new Producto(2, "Windows 11", "Descripción 2", 29.99));
-            productos.add(new Producto(3, "OneDrive 1TB", "Descripción 3", 39.99));
+            productos.add(new Producto(1, "Microsoft Windows 11 Pro", "Descripción del producto 1", 49.99, "https://images.g2a.com/940x528/1x1x0/microsoft-windows-11-pro-pc-microsoft-key-global-i10000271164001/f0fcf80e6cf84e518c39d5b6"));
+            productos.add(new Producto(2, "Microsoft Office Professional Plus 2021", "Descripción del producto 2", 19.99, "https://images.g2a.com/940x528/1x1x0/microsoft-office-professional-plus-2021-pc-microsoft-key-global-i10000271538001/202a62e65a5c456ebf44c92e"));
+            productos.add(new Producto(3, "Windows Server 2022 Standard", "Descripción del producto 3", 19.99, "https://images.g2a.com/940x528/1x1x0/windows-server-2022-standard-pc-microsoft-key-global-i10000266811003/2804575bd9dc42baa63e8e3c"));
 
             for (Producto producto : productos) {
         %>
-        <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-                <div class="card-body">
+        <div class="col-md-4 d-flex align-items-stretch">
+            <div class="card mb-4 shadow-sm" style="width: 18rem; height: 450px;">
+                <img src="<%= producto.getImagen() %>" class="card-img-top" alt="<%= producto.getNombre() %>" style="height: 200px; object-fit: cover;">
+                <div class="card-body d-flex flex-column">
                     <h5 class="card-title"><%= producto.getNombre() %></h5>
                     <p class="card-text"><%= producto.getDescripcion() %></p>
                     <p class="card-text"><strong>Precio:</strong> $<%= producto.getPrecio() %></p>
-                    <a href="agregarAlCarrito?id=<%= producto.getId() %>" class="btn btn-primary">Añadir al Carrito</a>
+                    <a href="agregarAlCarrito?id=<%= producto.getId() %>" class="btn btn-primary mt-auto">Añadir al Carrito</a>
                 </div>
             </div>
         </div>
